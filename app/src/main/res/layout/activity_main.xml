@@ -4,45 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blacktea"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Timer"
-        android:textSize="30sp"
+        android:layout_marginTop="32dp"
+        android:text="1:00"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Quick Timers"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Custom Timer"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/herbalTeaButton" />
 
     <Button
         android:id="@+id/frenchPressButton"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:onClick="frenchPressTimerStart"
         android:text="French Press"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/blackTeaButton"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:onClick="blackTeaTimerStart"
         android:text="Black Tea"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/greenTeaButton"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:onClick="greenTeaTimerStart"
         android:text="Green Tea"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frenchPressButton" />
@@ -51,29 +86,35 @@
         android:id="@+id/herbalTeaButton"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="64dp"
+        android:onClick="herbalTeaTimerStart"
         android:text="Herbal Tea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/blackTeaButton" />
 
     <Button
         android:id="@+id/customTimerButton"
-        android:layout_width="100dp"
+        android:layout_width="199dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:text="Custom"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="customTimerStart"
+        android:text="Start Custom Timer"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/herbalTeaButton" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <SeekBar
         android:id="@+id/seekBar"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customTimerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </android.support.constraint.ConstraintLayout>
